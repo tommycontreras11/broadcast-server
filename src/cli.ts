@@ -1,14 +1,17 @@
 #!/usr/bin/env node
 
+import { connectClient } from "./client.js";
+import { startServer } from "./server.js";
+
 const command = process.argv[2];
 
 switch (command) {
   case "start":
-    console.log("Start")
+    startServer(8080)
     break;
 
   case "connect":
-    console.log("connect")
+    connectClient()
     break;
 
   default:
