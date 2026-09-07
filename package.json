@@ -1,0 +1,22 @@
+{
+    "name": "broadcast-server",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "A CLI-based real-time broadcast server built with WebSockets.",
+    "bin": {
+        "broadcast-server": "./dist/cli.js"
+    },
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsx src/cli.ts"
+    },
+    "dependencies": {
+        "ws": "^8.18.3"
+    },
+    "devDependencies": {
+        "@types/node": "^22.0.0",
+        "@types/ws": "^8.5.12",
+        "tsx": "^4.19.0",
+        "typescript": "^5.0.0"
+    }
+}
