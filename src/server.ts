@@ -12,9 +12,7 @@ export const startServer = (port: number) => {
 
     clients.set(socket, clientId);
 
-    console.log(`${clientId} connected.`);
-
-    console.log(`Client connected. Total clients: ${clients.size}`);
+    console.log(`${clientId} connected. Total clients: ${clients.size}`);
 
     socket.on("message", (message) => {
       const clientId = clients.get(socket);
