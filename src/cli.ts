@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import { signUp } from "./auth.js";
 import { connectClient } from "./client.js";
 import { startServer } from "./server.js";
 
@@ -12,6 +13,10 @@ switch (command) {
 
   case "connect":
     connectClient()
+    break;
+
+  case "register":
+    signUp()
     break;
 
   default:

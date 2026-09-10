@@ -1,10 +1,13 @@
 import WebSocket from "ws";
 import readline from "node:readline";
+import { signIn } from "./auth.js";
 
 export const connectClient = () => {
   const socket = new WebSocket("ws://localhost:8080");
 
-  socket.on("open", () => {
+  socket.on("open", async () => {
+    await signIn();
+
     console.log("Connected to broadcast server on port 8080.");
 
     const readlineInterface = readline.createInterface({
